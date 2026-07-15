@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snehal Baranwal | Java Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Snehal Baranwal, a Java Full Stack Developer specializing in Java, Spring Boot, React.js, SQL, and REST APIs. Explore my projects, skills, certifications, and experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Bebas+Neue&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="enhancements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Inline SVG Favicon (Laptop 💻) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+</head>
+<body>
+    <!-- Page Loading Screen -->
+    <div id="spotlight"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <canvas id="constellation-canvas"></canvas>
+    <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+    <div id="page-loader" class="page-loader">
+        <div class="loader-inner">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Initializing<span class="loader-dots">...</span></div>
+        </div>
+    </div>
+
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor"></div>
+    <div class="cursor-clone" id="clone-1"></div>
+    <div class="cursor-clone" id="clone-2"></div>
+    <div class="cursor-clone" id="clone-3"></div>
+    <canvas id="compute-canvas"></canvas>
+    <div class="system-grid-hub"></div>
+    
+    <!-- Floating System Power Meter -->
+    <div id="core-power-container" class="core-power-container">
+        <div class="core-power-label">CORE POWER</div>
+        <div class="core-power-bar">
+            <div id="core-power-fill" class="core-power-fill"></div>
+        </div>
+        <div id="core-power-text" class="core-power-text">100%</div>
+    </div>
+
+    <!-- Hidden System Diagnostics Overlay -->
+    <div id="diagnostics-overlay" class="diagnostics-overlay">
+        <div class="diagnostics-wrapper">
+            <div class="diagnostics-header-line"></div>
+            <div class="diagnostics-body">
+                <button class="diagnostics-close-btn" id="closeScroll">&times;</button>
+                <h2 class="diagnostics-title">System Diagnostics: Developer Profile</h2>
+                <div class="diagnostics-content">
+                    <div class="diagnostics-profile-card">
+                        <div class="profile-avatar">💻</div>
+                        <div class="profile-details">
+                            <h3>Snehal Baranwal</h3>
+                            <p><strong>Rank:</strong> Full Stack Engineer &amp; Systems Architect</p>
+                            <p><strong>Affiliation:</strong> VIT Bhopal University (Final Year)</p>
+                        </div>
+                    </div>
+                    <div class="profile-stats-container">
+                        <h4>Engine Capability Profile (Quantitative Stack Diagnostics)</h4>
+                        <div class="stat-bar-group">
+                            <label>Full-Stack Engineering</label>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 92%;"></div></div>
+                        </div>
+                        <div class="stat-bar-group">
+                            <label>Algorithmic Efficiency &amp; Optimization</label>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 88%;"></div></div>
+                        </div>
+                        <div class="stat-bar-group">
+                            <label>Data Integration &amp; Visual Analytics</label>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="stat-bar-group">
+                            <label>System Design &amp; Architectural Scalability</label>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 85%;"></div></div>
+                        </div>
+                    </div>
+                    <div class="auth-sync-container">
+                        <p>Register credentials to establish alliance connection:</p>
+                        <div class="sync-input-group">
+                            <input type="text" id="syncName" placeholder="Enter Your Name..." />
+                            <button id="syncBtn" class="btn-sync-auth">Register Connection</button>
+                        </div>
+                        <div id="syncStatus" class="sync-status-stamp"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="diagnostics-footer-line"></div>
+        </div>
+    </div>
+
+    <!-- Hidden Certificate Lightbox -->
+    <div id="cert-lightbox" class="cert-lightbox">
+        <span class="lightbox-close" id="closeLightbox">&times;</span>
+        <div class="lightbox-content-wrapper">
+            <img class="lightbox-img" id="lightboxImg" src="" alt="Certificate Preview">
+            <div class="lightbox-details">
+                <h3 id="lightboxTitle">Certificate Title</h3>
+                <p id="lightboxIssuer" class="cert-issuer">Issuer</p>
+                <div id="lightboxDesc" class="cert-desc">Detailed quantitative outcomes and technical skills verified.</div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo-wrapper">
+                    <a href="#hero" class="logo"><span class="logo-bracket">&lt;</span><span class="logo-text">SB</span><span class="logo-bracket">/&gt;</span><span class="logo-name"></span></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#anime-interests">Anime</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <button id="audio-toggle" class="audio-toggle-btn" aria-label="Toggle sound">
+                        <i class="fas fa-volume-mute"></i>
+                    </button>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="section hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-status-badge">
+                        <span class="status-dot"></span>
+                        <span>Available for Opportunities</span>
+                    </div>
+                    <span class="hero-tagline">Hello World, my name is</span>
+                    <h1 class="hero-name">Snehal Baranwal</h1>
+                    <h2 class="hero-work">Java Full Stack Developer.</h2>
+                    <p class="hero-intro">I am a final-year Computer Science student at VIT Bhopal University, specializing in crafting robust, scalable full-stack applications using Java, Spring Boot, React.js, and SQL databases, with secure backend architectures.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn-primary">View My Work</a>
+                        <a href="#contact" class="btn-secondary">Get In Touch</a>
+                    </div>
+                    <div class="hero-tech-pills">
+                        <span class="tech-pill">Java</span>
+                        <span class="tech-pill">Spring Boot</span>
+                        <span class="tech-pill">React.js</span>
+                        <span class="tech-pill">SQL</span>
+                        <span class="tech-pill">PostgreSQL</span>
+                    </div>
+                    <div class="hero-coding-stats">
+                        <a href="https://www.geeksforgeeks.org/user/snehalbaranwal" target="_blank" rel="noopener noreferrer" class="coding-stat-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" alt="GFG" class="platform-logo" />
+                            <div>
+                                <span class="coding-stat-num">100+</span>
+                                <span class="coding-stat-label">GFG Problems</span>
+                            </div>
+                        </a>
+                        <div class="coding-stat-divider"></div>
+                        <a href="https://leetcode.com/u/Lonewolf100/" target="_blank" rel="noopener noreferrer" class="coding-stat-item">
+                            <i class="fas fa-code" style="color:#FFA116; font-size:1.3rem;"></i>
+                            <div>
+                                <span class="coding-stat-num">100+</span>
+                                <span class="coding-stat-label">LeetCode Solved</span>
+                            </div>
+                        </a>
+                        <div class="coding-stat-divider"></div>
+                        <a href="https://github.com/snehal-100" target="_blank" rel="noopener noreferrer" class="coding-stat-item">
+                            <i class="fab fa-github" style="font-size:1.3rem;"></i>
+                            <div>
+                                <span class="coding-stat-num">10+</span>
+                                <span class="coding-stat-label">GitHub Repos</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="quantum-core">
+                        <div class="core-ring ring-1"></div>
+                        <div class="core-ring ring-2"></div>
+                        <div class="core-ring ring-3"></div>
+                        <div class="core-nucleus"></div>
+                        <div class="orbit-badge orbit-badge-1">React</div>
+                        <div class="orbit-badge orbit-badge-2">Spring Boot</div>
+                        <div class="orbit-badge orbit-badge-3">Java</div>
+                        <div class="orbit-badge orbit-badge-4">SQL</div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <a href="#about" aria-label="Scroll to About Me section">
+                    <span class="scroll-mouse">
+                        <span class="scroll-wheel"></span>
+                    </span>
+                    <span class="scroll-arrow"></span>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-label">01 / About</span>
+                <h2>About Me</h2>
+            </div>
+            <div class="about-grid-layout">
+                <div class="about-text-content reveal">
+                    <p>Java Full Stack Developer passionate about building scalable web applications, secure backend systems, and responsive user interfaces. Currently in my final year of Computer Science at VIT Bhopal University, I specialize in Java, Spring Boot, React.js, SQL, REST APIs, and Data Structures.</p>
+                    <div class="about-highlights">
+                        <div class="highlight-item reveal reveal-delay-1">
+                            <i class="fas fa-code"></i>
+                            <h4>Problem Solver</h4>
+                            <p>Expert in data structures and algorithms</p>
+                        </div>
+                        <div class="highlight-item reveal reveal-delay-2">
+                            <i class="fas fa-rocket"></i>
+                            <h4>Full Stack</h4>
+                            <p>End-to-end application development</p>
+                        </div>
+                        <div class="highlight-item reveal reveal-delay-3">
+                            <i class="fas fa-server"></i>
+                            <h4>Backend Developer</h4>
+                            <p>Secure APIs and database systems</p>
+                        </div>
+                    </div>
+                    <p class="about-cta">Driven by a focus on building robust, modular digital systems and clean RESTful microservices.</p>
+                    <div class="about-platform-row">
+                        <a href="https://github.com/snehal-100" target="_blank" rel="noopener noreferrer" class="platform-link-btn" aria-label="GitHub">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/snehal-baranwal" target="_blank" rel="noopener noreferrer" class="platform-link-btn" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://www.geeksforgeeks.org/user/snehalbaranwal" target="_blank" rel="noopener noreferrer" class="platform-link-btn" aria-label="GeeksForGeeks">
+                            <i class="fas fa-code"></i> GFG
+                        </a>
+                        <a href="mailto:snehalbaranwal5@gmail.com" class="platform-link-btn" aria-label="Email">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                    </div>
+                </div>
+                <div class="about-terminal-wrapper reveal reveal-delay-2">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">bash - snehal@vitbhopal</span>
+                    </div>
+                    <div class="terminal-body" id="aboutTerminalBody">
+                        <div class="terminal-line"><span class="terminal-prompt">snehal@vitbhopal:~$</span> node portfolio.js</div>
+                        <div class="terminal-line output">Loading Snehal's skills...</div>
+                        <div class="terminal-line output">Backend Development: ACTIVE [Java, Spring Boot, REST APIs]</div>
+                        <div class="terminal-line output">Frontend Development: ACTIVE [React.js, JavaScript, CSS3]</div>
+                        <div class="terminal-line output">Algorithms & Data Structures: S-Rank [OOPS, DSA]</div>
+                        <div class="terminal-line"><span class="terminal-prompt">snehal@vitbhopal:~$</span> <span class="terminal-cursor">█</span></div>
+                    </div>
+                    <button class="terminal-run-btn" id="runTerminalCode">
+                        <i class="fas fa-play"></i> Run DeveloperDNA.java
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section transit-section">
+        <div class="container">
+            <div class="section-heading reveal">
+                <span class="section-label">02 / Educational Transit</span>
+                <h2>Journey Route</h2>
+                <p class="section-sub-desc">Subway network map of my academic milestones and qualifications.</p>
+            </div>
+            
+            <div class="transit-map">
+                <!-- Glowing central track line -->
+                <div class="transit-track">
+                    <div class="transit-train"></div>
+                </div>
+                
+                <!-- Station 1: B.Tech -->
+                <div class="transit-station active-station reveal">
+                    <div class="station-node">
+                        <div class="station-ping"></div>
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <div class="station-board border-amber">
+                        <div class="board-scanner"></div>
+                        <div class="board-header">
+                            <span class="board-status blink-text"><i class="fas fa-circle"></i> ACTIVE STATION</span>
+                            <span class="board-id">STN-03 // VITB</span>
+                        </div>
+                        <div class="board-body">
+                            <h3 class="board-title">B.Tech in Computer Science</h3>
+                            <div class="board-org">VIT Bhopal University · CSE Core</div>
+                            <div class="board-stats">
+                                <div class="board-stat">
+                                    <span class="stat-lbl">CGPA</span>
+                                    <span class="stat-num glow-amber">8.97<sup>/10</sup></span>
+                                </div>
+                                <div class="board-stat">
+                                    <span class="stat-lbl">SEMESTER</span>
+                                    <span class="stat-num">FINAL YEAR</span>
+                                </div>
+                                <div class="board-stat">
+                                    <span class="stat-lbl">LINE DEP</span>
+                                    <span class="stat-num">2027</span>
+                                </div>
+                            </div>
+                            <div class="board-skills">
+                                <span>DSA</span><span>DBMS</span><span>OS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Station 2: 12th -->
+                <div class="transit-station completed-station reveal reveal-delay-1">
+                    <div class="station-node">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="station-board border-indigo">
+                        <div class="board-header">
+                            <span class="board-status"><i class="fas fa-check"></i> DEP CONFIRMED</span>
+                            <span class="board-id">STN-02 // CBSE</span>
+                        </div>
+                        <div class="board-body">
+                            <h3 class="board-title">12th Grade (PCM + Computer Science)</h3>
+                            <div class="board-org">CBSE Board · Science Stream</div>
+                            <div class="board-stats">
+                                <div class="board-stat">
+                                    <span class="stat-lbl">AGGREGATE</span>
+                                    <span class="stat-num glow-indigo">89%</span>
+                                </div>
+                                <div class="board-stat">
+                                    <span class="stat-lbl">LINE DEP</span>
+                                    <span class="stat-num">2023</span>
+                                </div>
+                            </div>
+                            <div class="board-skills">
+                                <span>Physics</span><span>Chemistry</span><span>Mathematics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Station 3: 10th -->
+                <div class="transit-station completed-station reveal reveal-delay-2">
+                    <div class="station-node">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="station-board border-green">
+                        <div class="board-header">
+                            <span class="board-status"><i class="fas fa-check"></i> DEP CONFIRMED</span>
+                            <span class="board-id">STN-01 // ICSE</span>
+                        </div>
+                        <div class="board-body">
+                            <h3 class="board-title">10th Grade (General Studies)</h3>
+                            <div class="board-org">ICSE Board · Computer Applications</div>
+                            <div class="board-stats">
+                                <div class="board-stat">
+                                    <span class="stat-lbl">AGGREGATE</span>
+                                    <span class="stat-num glow-green">83.6%</span>
+                                </div>
+                                <div class="board-stat">
+                                    <span class="stat-lbl">LINE DEP</span>
+                                    <span class="stat-num">2021</span>
+                                </div>
+                            </div>
+                            <div class="board-skills">
+                                <span>Science</span><span>Maths</span><span>CS</span><span>English</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-heading reveal">
+                <span class="section-label">03 / Tech Arsenal</span>
+                <h2>Skills &amp; Capabilities</h2>
+                <p class="section-sub-desc">Interact with the nodes to probe systems capability and technical synchronization.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="skills-filter-tabs" id="skillsFilterTabs">
+                <button class="skill-filter-btn active" data-filter="all">All Modules</button>
+                <button class="skill-filter-btn" data-filter="frontend">Frontend</button>
+                <button class="skill-filter-btn" data-filter="backend">Backend</button>
+                <button class="skill-filter-btn" data-filter="database">Data &amp; DB</button>
+            </div>
+
+            <div class="skills-honeycomb-wrapper reveal">
+                <!-- Honeycomb Grid -->
+                <div class="skills-hex-container">
+                    <div class="honeycomb-grid" id="honeycombGrid">
+                        <!-- Row 1 -->
+                        <div class="hex-cell reveal" data-skill="React" data-category="frontend" data-pct="90" data-level="EXPERT" data-color="#61DAFB" data-desc="Component-based architecture, context APIs, custom hooks, and state optimization. Used in TourWeave and Flare.">
+                            <div class="hex-in"><div class="hex-content"><i class="fab fa-react"></i><span>React</span></div></div>
+                        </div>
+                        <div class="hex-cell reveal" data-skill="Java" data-category="backend" data-pct="92" data-level="EXPERT" data-color="#F89820" data-desc="Object-oriented core logic, multi-threading architectures, memory management, garbage collection, and Java backend development.">
+                            <div class="hex-in"><div class="hex-content"><i class="fab fa-java"></i><span>Java</span></div></div>
+                        </div>
+                        <div class="hex-cell reveal" data-skill="JavaScript" data-category="frontend" data-pct="88" data-level="ADVANCED" data-color="#F7DF1E" data-desc="ES6+ features, asynchronous programming, DOM lifecycle manipulation, and modular vanilla implementations.">
+                            <div class="hex-in"><div class="hex-content"><i class="fab fa-js-square"></i><span>JS</span></div></div>
+                        </div>
+                        <div class="hex-cell reveal" data-skill="Spring Boot" data-category="backend" data-pct="85" data-level="ADVANCED" data-color="#6DB33F" data-desc="Robust REST microservices, Spring Security JWT filter auth, JPA repository database integrations. Used in TaskFlow.">
+                            <div class="hex-in"><div class="hex-content"><i class="fas fa-leaf"></i><span>Spring</span></div></div>
+                        </div>
+                        <!-- Row 2 -->
+                        <div class="hex-cell reveal" data-skill="Hibernate" data-category="backend" data-pct="80" data-level="ADVANCED" data-color="#59666C" data-desc="Object-Relational Mapping (ORM), entity lifecycle state management, transaction coordination, and query optimization.">
+                            <div class="hex-in"><div class="hex-content"><i class="fas fa-link"></i><span>Hibernate</span></div></div>
+                        </div>
+                        <div class="hex-cell reveal" data-skill="SQL" data-category="database" data-pct="90" data-level="EXPERT" data-color="#4479A1" data-desc="Relational database normalization, complex multi-table joins, subqueries, query indexing optimization, and stored procedures.">
+                            <div class="hex-in"><div class="hex-content"><i class="fas fa-table"></i><span>SQL</span></div></div>
+                        </div>
+                        <div class="hex-cell reveal" data-skill="PostgreSQL" data-category="database" data-pct="85" data-level="ADVANCED" data-color="#336791" data-desc="Relational database schema modeling, transaction management, constraint enforcement, and indexed query optimizations.">
+                            <div class="hex-in"><div class="hex-content"><i class="fas fa-database"></i><span>Postgres</span></div></div>
+                        </div>
+                        <div class="hex-cell reveal" data-skill="MongoDB" data-category="database" data-pct="82" data-level="ADVANCED" data-color="#47A248" data-desc="NoSQL document modeling, indexing strategies, aggregation pipelines, and high-performance querying.">
+                            <div class="hex-in"><div class="hex-content"><i class="fas fa-database"></i><span>MongoDB</span></div></div>
+                        </div>
+                        <!-- Row 3 -->
+                        <div class="hex-cell reveal" data-skill="Supabase" data-category="database" data-pct="80" data-level="ADVANCED" data-color="#3ECF8E" data-desc="BaaS integration, PostgreSQL hosting, Supabase Authentication workflows, and real-time database subscription services. Used in TourWeave.">
+                            <div class="hex-in"><div class="hex-content"><i class="fas fa-bolt"></i><span>Supabase</span></div></div>
+                        </div>
+                        <div class="hex-cell reveal" data-skill="Git" data-category="backend" data-pct="85" data-level="ADVANCED" data-color="#F05032" data-desc="Distributed version control, branching strategies, commit tracking, merge conflict resolution, and GitHub collaboration workflows.">
+                            <div class="hex-in"><div class="hex-content"><i class="fab fa-git-alt"></i><span>Git</span></div></div>
+                        </div>
+                        <div class="hex-cell reveal" data-skill="HTML5" data-category="frontend" data-pct="95" data-level="EXPERT" data-color="#E34F26" data-desc="Semantic layout engineering, standard accessibility compliance, web structures, and SEO optimization frameworks.">
+                            <div class="hex-in"><div class="hex-content"><i class="fab fa-html5"></i><span>HTML5</span></div></div>
+                        </div>
+                        <div class="hex-cell reveal" data-skill="CSS3" data-category="frontend" data-pct="90" data-level="EXPERT" data-color="#1572B6" data-desc="Responsive layouts, flexbox, CSS grid systems, hardware-accelerated animations, custom design tokens, and CSS custom variables.">
+                            <div class="hex-in"><div class="hex-content"><i class="fab fa-css3-alt"></i><span>CSS3</span></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Holographic HUD Console -->
+                <div class="skills-hud-console">
+                    <div class="hud-scanner">
+                        <div class="scanner-sweep"></div>
+                        <div class="hud-radar">
+                            <div class="radar-line"></div>
+                            <div class="radar-circles">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hud-display-panel" id="hudDisplayPanel">
+                        <div class="hud-header">
+                            <span class="hud-status-led pulse-glow-green"></span>
+                            <span class="hud-title">SYSTEM DIAGNOSTICS: STANDBY</span>
+                        </div>
+                        <div class="hud-data-fields">
+                            <div class="hud-placeholder-msg">
+                                <i class="fas fa-microchip blink-text"></i>
+                                <p>HOVER OR TAP A TECH NODE ON THE GRID TO INITIATE HOLOGRAPHIC SYSTEMS SCAN</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section blueprint-section">
+        <div class="container">
+            <div class="section-heading reveal">
+                <span class="section-label">04 / Architecture Archives</span>
+                <h2>Projects &amp; Systems</h2>
+                <p class="section-sub-desc">Detailed system schematics and technical implementation reports for key projects.</p>
+            </div>
+
+            <div class="blueprint-archive">
+                <!-- Project 1: TourWeave Collaborative Travel Planning Platform -->
+                <div class="project project-dossier reveal" data-project-id="1">
+                    <div class="dossier-schematic">
+                        <div class="schematic-title"><i class="fas fa-project-diagram"></i> COLLABORATIVE ARCHITECTURE SCHEMATIC</div>
+                        <div class="schematic-board">
+                            <div class="schematic-node node-fe" style="--col: 1; --row: 2;">
+                                <div class="node-icon"><i class="fab fa-react"></i></div>
+                                <span class="node-label">React Client</span>
+                            </div>
+                            <div class="schematic-node node-be" style="--col: 3; --row: 2;">
+                                <div class="node-icon"><i class="fas fa-bolt"></i></div>
+                                <span class="node-label">Supabase Backend</span>
+                            </div>
+                            <div class="schematic-node node-db" style="--col: 5; --row: 1;">
+                                <div class="node-icon"><i class="fas fa-database"></i></div>
+                                <span class="node-label">PostgreSQL DB</span>
+                            </div>
+                            <div class="schematic-node node-gateway" style="--col: 5; --row: 3;">
+                                <div class="node-icon"><i class="fas fa-envelope"></i></div>
+                                <span class="node-label">EmailJS Gateway</span>
+                            </div>
+                            
+                            <!-- Interconnection wires -->
+                            <svg class="schematic-wires" viewBox="0 0 500 200">
+                                <!-- Fe to Be -->
+                                <path d="M120 100 H260" class="wire-line" />
+                                <circle r="3" class="wire-pulse animate-pulse-febe" />
+                                <!-- Be to Db -->
+                                <path d="M340 100 L420 50" class="wire-line" />
+                                <circle r="3" class="wire-pulse animate-pulse-bedb" />
+                                <!-- Be to Email -->
+                                <path d="M340 100 L420 150" class="wire-line" />
+                                <circle r="3" class="wire-pulse animate-pulse-bestripe" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="dossier-details">
+                        <div class="dossier-header">
+                            <span class="dossier-num">DOSSIER // 01</span>
+                            <h3>TourWeave</h3>
+                            <span class="dossier-date">Dec. 2025 – Mar. 2026</span>
+                        </div>
+                        <p class="dossier-desc">A full-stack collaborative travel planning platform enabling users to create trips, manage itineraries, and invite members through secure email invitations. Designed reusable React components and implemented RESTful CRUD operations.</p>
+                        
+                        <div class="dossier-meta-grid">
+                            <div class="meta-item"><i class="fas fa-users"></i> <strong>Collab:</strong> Secure Invites</div>
+                            <div class="meta-item"><i class="fas fa-shield-alt"></i> <strong>Auth:</strong> Supabase Auth</div>
+                        </div>
+                        
+                        <div class="dossier-tech-tags">
+                            <span class="tag-react"><i class="fab fa-react"></i> React.js</span>
+                            <span class="tag-js"><i class="fab fa-js-square"></i> JavaScript</span>
+                            <span class="tag-supabase"><i class="fas fa-bolt"></i> Supabase</span>
+                            <span class="tag-postgres"><i class="fas fa-database"></i> PostgreSQL</span>
+                            <span class="tag-email"><i class="fas fa-envelope"></i> EmailJS</span>
+                        </div>
+
+                        <div class="project-console" id="console-1">
+                            <div class="console-line">> Initializing Supabase Auth client...</div>
+                            <div class="console-line">> EmailJS SMTP: Listening for member invites</div>
+                        </div>
+
+                        <div class="dossier-actions">
+                            <a href="https://tourweave.vercel.app" class="btn-dossier-live" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/RichGuyPoorGuy/tourweave" class="btn-dossier-code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: TaskFlow Task Management System -->
+                <div class="project project-dossier dossier-reverse reveal reveal-delay-1" data-project-id="2">
+                    <div class="dossier-schematic">
+                        <div class="schematic-title"><i class="fas fa-project-diagram"></i> TASK WORKSPACE &amp; SECURITY SCHEMATIC</div>
+                        <div class="schematic-board">
+                            <div class="schematic-node node-fe" style="--col: 1; --row: 2;">
+                                <div class="node-icon"><i class="fab fa-react"></i></div>
+                                <span class="node-label">Task Dashboard</span>
+                            </div>
+                            <div class="schematic-node node-be" style="--col: 3; --row: 2;">
+                                <div class="node-icon"><i class="fas fa-leaf"></i></div>
+                                <span class="node-label">Spring Boot</span>
+                            </div>
+                            <div class="schematic-node node-security" style="--col: 5; --row: 1;">
+                                <div class="node-icon"><i class="fas fa-key"></i></div>
+                                <span class="node-label">JWT Auth Guard</span>
+                            </div>
+                            <div class="schematic-node node-db" style="--col: 5; --row: 3;">
+                                <div class="node-icon"><i class="fas fa-database"></i></div>
+                                <span class="node-label">MySQL Database</span>
+                            </div>
+                            
+                            <!-- Interconnection wires -->
+                            <svg class="schematic-wires" viewBox="0 0 500 200">
+                                <!-- Fe to Be (Double Arrow) -->
+                                <path d="M120 100 H260" class="wire-line wire-double" />
+                                <circle r="3" class="wire-pulse animate-pulse-febe" />
+                                <!-- Be to JWT -->
+                                <path d="M340 100 L420 50" class="wire-line" />
+                                <circle r="3" class="wire-pulse animate-pulse-bedb" />
+                                <!-- Be to DB -->
+                                <path d="M340 100 L420 150" class="wire-line" />
+                                <circle r="3" class="wire-pulse animate-pulse-bestripe" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="dossier-details">
+                        <div class="dossier-header">
+                            <span class="dossier-num">DOSSIER // 02</span>
+                            <h3>TaskFlow</h3>
+                            <span class="dossier-date">June 2025 – Sept. 2025</span>
+                        </div>
+                        <p class="dossier-desc">A full-stack task management application supporting project creation, task assignment, status tracking, and deadline management. Built secure REST APIs with Spring Boot and integrated JWT-based authentication with Spring Security.</p>
+                        
+                        <div class="dossier-meta-grid">
+                            <div class="meta-item"><i class="fas fa-shield-alt"></i> <strong>Auth:</strong> JWT Security</div>
+                            <div class="meta-item"><i class="fas fa-sync"></i> <strong>ORM:</strong> Hibernate Mapping</div>
+                        </div>
+                        
+                        <div class="dossier-tech-tags">
+                            <span class="tag-java"><i class="fab fa-java"></i> Java</span>
+                            <span class="tag-spring"><i class="fas fa-leaf"></i> Spring Boot</span>
+                            <span class="tag-react"><i class="fab fa-react"></i> React.js</span>
+                            <span class="tag-postgres"><i class="fas fa-database"></i> PostgreSQL</span>
+                            <span class="tag-mysql"><i class="fas fa-database"></i> MySQL</span>
+                        </div>
+
+                        <div class="project-console" id="console-2">
+                            <div class="console-line">> Spring Security: Custom JWT Filter loaded</div>
+                            <div class="console-line">> Hibernate: Schema validation complete</div>
+                        </div>
+
+                        <div class="dossier-actions">
+                            <a href="https://taskflow-frontend-09hq.onrender.com" class="btn-dossier-live" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/snehal-100/TaskFlow-FullStack" class="btn-dossier-code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Flare Grocery Shopping Platform -->
+                <div class="project project-dossier reveal reveal-delay-2" data-project-id="3">
+                    <div class="dossier-schematic">
+                        <div class="schematic-title"><i class="fas fa-project-diagram"></i> E-COMMERCE ENGINE DIAGRAM</div>
+                        <div class="schematic-board">
+                            <div class="schematic-node node-fe" style="--col: 1; --row: 2;">
+                                <div class="node-icon"><i class="fab fa-react"></i></div>
+                                <span class="node-label">React UI Client</span>
+                            </div>
+                            <div class="schematic-node node-be" style="--col: 3; --row: 2;">
+                                <div class="node-icon"><i class="fas fa-fire"></i></div>
+                                <span class="node-label">Firebase Auth</span>
+                            </div>
+                            <div class="schematic-node node-graphics" style="--col: 5; --row: 1;">
+                                <div class="node-icon"><i class="fas fa-database"></i></div>
+                                <span class="node-label">Firestore DB</span>
+                            </div>
+                            <div class="schematic-node node-db" style="--col: 5; --row: 3;">
+                                <div class="node-icon"><i class="fas fa-shopping-cart"></i></div>
+                                <span class="node-label">Cart Storage</span>
+                            </div>
+                            
+                            <!-- Interconnection wires -->
+                            <svg class="schematic-wires" viewBox="0 0 500 200">
+                                <!-- Fe to Be -->
+                                <path d="M120 100 H260" class="wire-line" />
+                                <circle r="3" class="wire-pulse animate-pulse-febe" />
+                                <!-- Be to DB -->
+                                <path d="M340 100 L420 50" class="wire-line" />
+                                <circle r="3" class="wire-pulse animate-pulse-bedb" />
+                                <!-- Be to Storage -->
+                                <path d="M340 100 L420 150" class="wire-line" />
+                                <circle r="3" class="wire-pulse animate-pulse-bestripe" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="dossier-details">
+                        <div class="dossier-header">
+                            <span class="dossier-num">DOSSIER // 03</span>
+                            <h3>Flare</h3>
+                            <span class="dossier-date">Sept. 2024 – Dec. 2024</span>
+                        </div>
+                        <p class="dossier-desc">A responsive grocery shopping platform featuring secure Firebase user authentication, Firestore database for persistent products, shopping cart logic, and category-based query filtering.</p>
+                        
+                        <div class="dossier-meta-grid">
+                            <div class="meta-item"><i class="fas fa-fire"></i> <strong>Data:</strong> Firebase &amp; Firestore</div>
+                            <div class="meta-item"><i class="fas fa-mobile-alt"></i> <strong>UX:</strong> Mobile-Responsive</div>
+                        </div>
+                        
+                        <div class="dossier-tech-tags">
+                            <span class="tag-react"><i class="fab fa-react"></i> React.js</span>
+                            <span class="tag-js"><i class="fab fa-js-square"></i> JavaScript</span>
+                            <span class="tag-firebase"><i class="fas fa-fire"></i> Firebase</span>
+                            <span class="tag-html"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tag-css"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        </div>
+
+                        <div class="project-console" id="console-3">
+                            <div class="console-line">> FirebaseApp initialized successfully</div>
+                            <div class="console-line">> Firestore: Mapped collection 'products'</div>
+                        </div>
+
+                        <div class="dossier-actions">
+                            <a href="https://flare-tau.vercel.app" class="btn-dossier-live" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/snehal-100" class="btn-dossier-code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="section stats-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-label">05 / Stats</span>
+                <h2>My Journey in Numbers</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon-large"><i class="fas fa-code"></i></div>
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">Major Projects</div>
+                    <svg class="stat-mini-chart" viewBox="0 0 100 30">
+                        <path d="M0,25 Q25,10 50,20 T100,5" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-large"><i class="fas fa-certificate"></i></div>
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">Certifications</div>
+                    <svg class="stat-mini-chart" viewBox="0 0 100 30">
+                        <path d="M0,28 L30,20 L60,10 L100,2" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-large"><i class="fas fa-laptop-code"></i></div>
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">DSA Problems Solved</div>
+                    <svg class="stat-mini-chart" viewBox="0 0 100 30">
+                        <path d="M0,25 Q30,5 60,18 T100,2" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-large"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="stat-number" data-target="4">0</div>
+                    <div class="stat-suffix">th</div>
+                    <div class="stat-label">Year B.Tech CS</div>
+                    <svg class="stat-mini-chart" viewBox="0 0 100 30">
+                        <path d="M0,29 L25,22 L50,15 L75,8 L100,2" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="section">
+        <div class="container">
+            <span class="section-label">06 / Professional Dossier</span>
+            <h2>Resume</h2>
+            <div class="resume-tabs">
+                <button class="resume-tab-btn active" data-target="all">Comprehensive Profile</button>
+                <button class="resume-tab-btn" data-target="developer">Full-Stack Dev</button>
+                <button class="resume-tab-btn" data-target="leadership">Club Leadership</button>
+            </div>
+            <div class="resume-layout">
+                <div class="resume-preview-card">
+                    <div class="resume-preview-header">
+                        <h3>Snehal Baranwal</h3>
+                        <div class="resume-preview-subtitle">Java Full Stack Developer</div>
+                        <div class="resume-preview-contact">
+                            <span><i class="fas fa-envelope"></i> snehalbaranwal5@gmail.com</span>
+                            <span>•</span>
+                            <span><i class="fas fa-map-marker-alt"></i> India</span>
+                        </div>
+                    </div>
+                    <div class="resume-preview-body">
+                        <div class="resume-preview-section" data-section="education">
+                            <h4>Education</h4>
+                            <div class="preview-item">
+                                <div class="preview-item-title">
+                                    <strong>B.Tech in Computer Science and Engineering</strong>
+                                    <span>Sept. 2023 - May 2027</span>
+                                </div>
+                                <p>Vellore Institute of Technology, Bhopal (CGPA: 8.97/10)</p>
+                            </div>
+                            <div class="preview-item">
+                                <div class="preview-item-title">
+                                    <strong>Class XII (PCM + CS)</strong>
+                                    <span>Apr. 2021 - May 2023</span>
+                                </div>
+                                <p>Maharishi Vidya Mandir School (89%)</p>
+                            </div>
+                            <div class="preview-item">
+                                <div class="preview-item-title">
+                                    <strong>Class X</strong>
+                                    <span>Apr. 2009 - Apr. 2021</span>
+                                </div>
+                                <p>Gurucharan Kaur Public School (83.6%)</p>
+                            </div>
+                        </div>
+                        <div class="resume-preview-section" data-section="projects">
+                            <h4>Highlighted Projects</h4>
+                            <div class="preview-item" data-focus="developer">
+                                <div class="preview-item-title">
+                                    <strong>TourWeave</strong>
+                                    <span>2025 - 2026</span>
+                                </div>
+                                <p>Collaborative travel planning platform integrating Supabase Authentication, PostgreSQL database operations, and EmailJS invitation workflows.</p>
+                            </div>
+                            <div class="preview-item" data-focus="developer">
+                                <div class="preview-item-title">
+                                    <strong>TaskFlow</strong>
+                                    <span>2025</span>
+                                </div>
+                                <p>Task management application with Spring Boot REST APIs, Spring Security JWT access, and Hibernate relational mappings.</p>
+                            </div>
+                            <div class="preview-item" data-focus="developer">
+                                <div class="preview-item-title">
+                                    <strong>Flare</strong>
+                                    <span>2024</span>
+                                </div>
+                                <p>E-commerce grocery shopping platform featuring secure Firebase Authentication, Firestore databases, and cart caching.</p>
+                            </div>
+                        </div>
+                        <div class="resume-preview-section" data-section="experience" data-focus="leadership">
+                            <h4>Leadership Experience</h4>
+                            <div class="preview-item" data-focus="leadership">
+                                <div class="preview-item-title">
+                                    <strong>General Secretary — BitByBit Club, VIT Bhopal</strong>
+                                    <span>Dec. 2025 - Mar. 2026</span>
+                                </div>
+                                <p>Led cross-functional teams to organize workshops, hackathons, and coding competitions; managed task delegation and event execution.</p>
+                            </div>
+                            <div class="preview-item" data-focus="leadership">
+                                <div class="preview-item-title">
+                                    <strong>Core Member — Nature and Trekking Club, VIT Bhopal</strong>
+                                    <span>Dec. 2024 - Mar. 2025</span>
+                                </div>
+                                <p>Organized student engagement activities by managing logistics, registrations, and collaborative event execution.</p>
+                            </div>
+                        </div>
+                        <div class="resume-preview-section" data-section="skills">
+                            <h4>Core Skills</h4>
+                            <p class="preview-skills-list" data-focus="developer">Java, JavaScript, SQL, HTML5, CSS3, Spring Boot, Spring Security, Hibernate, React.js, Supabase, Firebase, MySQL, PostgreSQL, MongoDB, REST APIs, Git, DSA, OOPS</p>
+                            <p class="preview-skills-list" data-focus="leadership">Team Leadership, Event Management, Cross-functional Collaboration, Task Delegation, Event Logistics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-download-card">
+                    <h3 class="download-title">Curriculum Vitae</h3>
+                    <p class="download-desc">For a comprehensive breakdown of my academic qualifications, tech stack competencies, and engineering project metrics, you can download a print-ready PDF version of my resume.</p>
+                    <ul class="download-benefits">
+                        <li><i class="fas fa-check-circle"></i> ATS-friendly format for technical recruiting</li>
+                        <li><i class="fas fa-check-circle"></i> Complete quantitative metrics and benchmarks</li>
+                        <li><i class="fas fa-check-circle"></i> Clickable repository paths to source code</li>
+                    </ul>
+                    <a href="Resume.pdf" download class="resume-btn">
+                        <i class="fas fa-download"></i>
+                        <span>Download Resume (PDF)</span>
+                    </a>
+                    <p class="resume-note">Updated January 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section cert-section">
+        <div class="container">
+            <div class="section-heading reveal">
+                <span class="section-label">07 / Verification Ledger</span>
+                <h2>Security Credentials</h2>
+                <p class="section-sub-desc">Click any security pass card to initialize biometric signature check and open credential vaults.</p>
+            </div>
+            
+            <div class="keycards-grid">
+                <!-- Keycard 1 -->
+                <div class="cert-card cert-keycard reveal" data-cert-img="#" data-cert-desc="ServiceNow developer training simulation covering application creation, scripting, database schema design, and service portal configurations.">
+                    <div class="keycard-scanner"></div>
+                    <div class="keycard-top">
+                        <div class="keycard-chip">
+                            <svg viewBox="0 0 40 30" width="40" height="30">
+                                <rect x="2" y="2" width="36" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="12" y1="2" x2="12" y2="28" stroke="currentColor" stroke-width="1"/>
+                                <line x1="28" y1="2" x2="28" y2="28" stroke="currentColor" stroke-width="1"/>
+                                <line x1="2" y1="15" x2="38" y2="15" stroke="currentColor" stroke-width="1"/>
+                                <circle cx="20" cy="15" r="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="keycard-auth-status">
+                            <span class="pulse-dot green-pulse"></span>
+                            <span class="status-lbl">SECURE LINK</span>
+                        </div>
+                    </div>
+                    <div class="keycard-body">
+                        <span class="cert-issuer keycard-issuer">ServiceNow</span>
+                        <h4 class="keycard-title">Virtual Internship Program</h4>
+                        <div class="keycard-meta">
+                            <div class="meta-field">
+                                <span class="meta-lbl">HOLDER</span>
+                                <span class="meta-val">SNEHAL BARANWAL</span>
+                            </div>
+                            <div class="meta-field">
+                                <span class="meta-lbl">ACCESS CODE</span>
+                                <span class="meta-val">SNOW-VIP2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="keycard-bottom">
+                        <div class="keycard-barcode">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <a href="#" class="btn-cert keycard-scan-btn" aria-label="Scan Certificate ID">
+                            <span>SCAN ID</span>
+                            <i class="fas fa-barcode"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Keycard 2 -->
+                <div class="cert-card cert-keycard reveal reveal-delay-1" data-cert-img="deloitte.jpeg" data-cert-desc="Hands-on Deloitte Australia technology job simulation covering cloud architecture assessments, microservices analysis, and security reviews.">
+                    <div class="keycard-scanner"></div>
+                    <div class="keycard-top">
+                        <div class="keycard-chip">
+                            <svg viewBox="0 0 40 30" width="40" height="30">
+                                <rect x="2" y="2" width="36" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="12" y1="2" x2="12" y2="28" stroke="currentColor" stroke-width="1"/>
+                                <line x1="28" y1="2" x2="28" y2="28" stroke="currentColor" stroke-width="1"/>
+                                <line x1="2" y1="15" x2="38" y2="15" stroke="currentColor" stroke-width="1"/>
+                                <circle cx="20" cy="15" r="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="keycard-auth-status">
+                            <span class="pulse-dot green-pulse"></span>
+                            <span class="status-lbl">SECURE LINK</span>
+                        </div>
+                    </div>
+                    <div class="keycard-body">
+                        <span class="cert-issuer keycard-issuer">Deloitte Australia</span>
+                        <h4 class="keycard-title">Technology Job Simulation</h4>
+                        <div class="keycard-meta">
+                            <div class="meta-field">
+                                <span class="meta-lbl">HOLDER</span>
+                                <span class="meta-val">SNEHAL BARANWAL</span>
+                            </div>
+                            <div class="meta-field">
+                                <span class="meta-lbl">ACCESS CODE</span>
+                                <span class="meta-val">FORAGE-DLO2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="keycard-bottom">
+                        <div class="keycard-barcode">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <a href="deloitte.jpeg" class="btn-cert keycard-scan-btn" aria-label="Scan Certificate ID">
+                            <span>SCAN ID</span>
+                            <i class="fas fa-barcode"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Keycard 3 -->
+                <div class="cert-card cert-keycard reveal reveal-delay-2" data-cert-img="nptel.jpeg" data-cert-desc="Comprehensive Machine Learning course by NPTEL covering regression, classification, SVMs, neural networks, clustering and decision trees.">
+                    <div class="keycard-scanner"></div>
+                    <div class="keycard-top">
+                        <div class="keycard-chip">
+                            <svg viewBox="0 0 40 30" width="40" height="30">
+                                <rect x="2" y="2" width="36" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="12" y1="2" x2="12" y2="28" stroke="currentColor" stroke-width="1"/>
+                                <line x1="28" y1="2" x2="28" y2="28" stroke="currentColor" stroke-width="1"/>
+                                <line x1="2" y1="15" x2="38" y2="15" stroke="currentColor" stroke-width="1"/>
+                                <circle cx="20" cy="15" r="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="keycard-auth-status">
+                            <span class="pulse-dot green-pulse"></span>
+                            <span class="status-lbl">SECURE LINK</span>
+                        </div>
+                    </div>
+                    <div class="keycard-body">
+                        <span class="cert-issuer keycard-issuer">NPTEL</span>
+                        <h4 class="keycard-title">Introduction to Machine Learning</h4>
+                        <div class="keycard-meta">
+                            <div class="meta-field">
+                                <span class="meta-lbl">HOLDER</span>
+                                <span class="meta-val">SNEHAL BARANWAL</span>
+                            </div>
+                            <div class="meta-field">
+                                <span class="meta-lbl">ACCESS CODE</span>
+                                <span class="meta-val">NPTEL-ML2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="keycard-bottom">
+                        <div class="keycard-barcode">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <a href="nptel.jpeg" class="btn-cert keycard-scan-btn" aria-label="Scan Certificate ID">
+                            <span>SCAN ID</span>
+                            <i class="fas fa-barcode"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Keycard 4 -->
+                <div class="cert-card cert-keycard reveal reveal-delay-3" data-cert-img="algo.jpeg" data-cert-desc="Advanced graph algorithms training: BFS/DFS, shortest paths, spanning trees, max flow and network algorithms.">
+                    <div class="keycard-scanner"></div>
+                    <div class="keycard-top">
+                        <div class="keycard-chip">
+                            <svg viewBox="0 0 40 30" width="40" height="30">
+                                <rect x="2" y="2" width="36" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="12" y1="2" x2="12" y2="28" stroke="currentColor" stroke-width="1"/>
+                                <line x1="28" y1="2" x2="28" y2="28" stroke="currentColor" stroke-width="1"/>
+                                <line x1="2" y1="15" x2="38" y2="15" stroke="currentColor" stroke-width="1"/>
+                                <circle cx="20" cy="15" r="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="keycard-auth-status">
+                            <span class="pulse-dot green-pulse"></span>
+                            <span class="status-lbl">SECURE LINK</span>
+                        </div>
+                    </div>
+                    <div class="keycard-body">
+                        <span class="cert-issuer keycard-issuer">AlgoUniversity</span>
+                        <h4 class="keycard-title">Graph Theory Programming</h4>
+                        <div class="keycard-meta">
+                            <div class="meta-field">
+                                <span class="meta-lbl">HOLDER</span>
+                                <span class="meta-val">SNEHAL BARANWAL</span>
+                            </div>
+                            <div class="meta-field">
+                                <span class="meta-lbl">ACCESS CODE</span>
+                                <span class="meta-val">ALGO-GRPH2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="keycard-bottom">
+                        <div class="keycard-barcode">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <a href="algo.jpeg" class="btn-cert keycard-scan-btn" aria-label="Scan Certificate ID">
+                            <span>SCAN ID</span>
+                            <i class="fas fa-barcode"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Keycard 5 -->
+                <div class="cert-card cert-keycard reveal reveal-delay-4" data-cert-img="#" data-cert-desc="Verified intermediate-level problem solving, algorithmic parsing, and complexity diagnostics under HackerRank certification.">
+                    <div class="keycard-scanner"></div>
+                    <div class="keycard-top">
+                        <div class="keycard-chip">
+                            <svg viewBox="0 0 40 30" width="40" height="30">
+                                <rect x="2" y="2" width="36" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                <line x1="12" y1="2" x2="12" y2="28" stroke="currentColor" stroke-width="1"/>
+                                <line x1="28" y1="2" x2="28" y2="28" stroke="currentColor" stroke-width="1"/>
+                                <line x1="2" y1="15" x2="38" y2="15" stroke="currentColor" stroke-width="1"/>
+                                <circle cx="20" cy="15" r="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="keycard-auth-status">
+                            <span class="pulse-dot green-pulse"></span>
+                            <span class="status-lbl">SECURE LINK</span>
+                        </div>
+                    </div>
+                    <div class="keycard-body">
+                        <span class="cert-issuer keycard-issuer">HackerRank</span>
+                        <h4 class="keycard-title">Problem Solving</h4>
+                        <div class="keycard-meta">
+                            <div class="meta-field">
+                                <span class="meta-lbl">HOLDER</span>
+                                <span class="meta-val">SNEHAL BARANWAL</span>
+                            </div>
+                            <div class="meta-field">
+                                <span class="meta-lbl">ACCESS CODE</span>
+                                <span class="meta-val">HRANK-PRBS2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="keycard-bottom">
+                        <div class="keycard-barcode">
+                            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <a href="#" class="btn-cert keycard-scan-btn" aria-label="Scan Certificate ID">
+                            <span>SCAN ID</span>
+                            <i class="fas fa-barcode"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <span class="section-label">08 / Secure Channel</span>
+            <h2>Get In Touch</h2>
+            <p class="contact-subtitle">Let's connect and explore exciting opportunities together</p>
+            
+            <div class="contact-layout">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p><a href="mailto:snehalbaranwal5@gmail.com">snehalbaranwal5@gmail.com</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-linkedin"></i>
+                        <h4>LinkedIn</h4>
+                        <p><a href="https://linkedin.com/in/snehal-baranwal" target="_blank" rel="noopener noreferrer">linkedin.com/in/snehal-baranwal</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <h4>GitHub</h4>
+                        <p><a href="https://github.com/snehal-100" target="_blank" rel="noopener noreferrer">github.com/snehal-100</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+919450849663">+91 9450849663</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="contact-name" name="name" required placeholder=" " />
+                            <label for="contact-name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="contact-email" name="email" required placeholder=" " />
+                            <label for="contact-email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="contact-subject" name="subject" required placeholder=" " />
+                            <label for="contact-subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="contact-message" name="message" required rows="5" placeholder=" "></textarea>
+                            <label for="contact-message">Your Message</label>
+                            <div class="char-counter" id="char-counter">0 / 500</div>
+                        </div>
+                        <button type="submit" class="btn-submit" id="btn-submit">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                            <span class="btn-ripple"></span>
+                        </button>
+                        <div id="form-status" class="form-status" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://linkedin.com/in/snehal-baranwal" class="social-btn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/snehal-100" class="social-btn" title="GitHub" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:snehalbaranwal5@gmail.com" class="social-btn" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="anime-interests" class="section">
+        <div class="container">
+            <span class="section-label">09 / Interests Core</span>
+            <h2>Anime & Interests</h2>
+            <p class="anime-subtitle">Beyond coding, I find inspiration in anime worlds and creative pursuits</p>
+            <div class="interests-nexus-deck">
+                <!-- Left Column: Neural Selector Pods -->
+                <div class="nexus-selector-column">
+                    <div class="nexus-connector-svg-wrap">
+                        <svg class="nexus-connector-svg" viewBox="0 0 200 400" preserveAspectRatio="none">
+                            <path class="nexus-wire-path active" data-interest="anime" d="M 20,50 C 100,50 100,200 180,200" />
+                            <path class="nexus-wire-path" data-interest="gaming" d="M 20,150 C 100,150 100,200 180,200" />
+                            <path class="nexus-wire-path" data-interest="music" d="M 20,250 C 100,250 100,200 180,200" />
+                            <path class="nexus-wire-path" data-interest="reading" d="M 20,350 C 100,350 100,200 180,200" />
+                        </svg>
+                    </div>
+                    
+                    <div class="nexus-nodes-container">
+                        <button class="nexus-node active" data-interest="anime" aria-label="Otaku & Anime Fan Module">
+                            <div class="nexus-node-glow"></div>
+                            <div class="nexus-node-content">
+                                <i class="fas fa-tv"></i>
+                                <span>Otaku & Anime</span>
+                            </div>
+                        </button>
+                        <button class="nexus-node" data-interest="gaming" aria-label="Gaming Enthusiast Module">
+                            <div class="nexus-node-glow"></div>
+                            <div class="nexus-node-content">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Gaming</span>
+                            </div>
+                        </button>
+                        <button class="nexus-node" data-interest="music" aria-label="Music Lover Module">
+                            <div class="nexus-node-glow"></div>
+                            <div class="nexus-node-content">
+                                <i class="fas fa-music"></i>
+                                <span>Music</span>
+                            </div>
+                        </button>
+                        <button class="nexus-node" data-interest="reading" aria-label="Avid Reader Module">
+                            <div class="nexus-node-glow"></div>
+                            <div class="nexus-node-content">
+                                <i class="fas fa-book"></i>
+                                <span>Reading</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Console Core -->
+                <div class="nexus-console-column">
+                    <div class="nexus-console-hud-header">
+                        <div class="hud-indicator active"><span class="hud-led"></span> CORE ONLINE</div>
+                        <div class="hud-diagnostic-ticker">SYS.RES_SYNC: 98.42% // APM_LATENCY: 0.08ms</div>
+                    </div>
+                    
+                    <div class="nexus-console-display">
+                        <div class="console-scanline"></div>
+                        <div class="console-grid-overlay"></div>
+                        
+                        <!-- Panel: Anime -->
+                        <div class="console-panel active" data-panel="anime">
+                            <div class="panel-header">
+                                <span class="panel-number">MOD-01 // COGNITIVE</span>
+                                <h3>Otaku & Anime Fan</h3>
+                            </div>
+                            <p>Fascinated by deep storytelling, character growth, and complex strategy in anime worlds. I draw inspiration from narratives of persistence, destiny-defying arcs, and critical analysis.</p>
+                            
+                            <div class="panel-metrics">
+                                <div class="metric-row">
+                                    <span class="metric-label">Anime Resonance</span>
+                                    <div class="metric-bar-container"><div class="metric-bar-fill" style="width: 98%"></div></div>
+                                    <span class="metric-val">98%</span>
+                                </div>
+                                <div class="metric-row">
+                                    <span class="metric-label">Strategic Analysis</span>
+                                    <div class="metric-bar-container"><div class="metric-bar-fill" style="width: 92%"></div></div>
+                                    <span class="metric-val">92%</span>
+                                </div>
+                            </div>
+                            
+                            <div class="panel-interactive-box">
+                                <div class="quote-terminal-header">
+                                    <span class="terminal-dot red"></span>
+                                    <span class="terminal-dot yellow"></span>
+                                    <span class="terminal-dot green"></span>
+                                    <span class="terminal-title">AURA_QUOTE_STREAM</span>
+                                </div>
+                                <div class="anime-quote-display" id="animeQuoteText">"If you don't like your destiny, don't accept it. Instead, have the courage to change it." - Naruto Uzumaki</div>
+                                <button class="console-action-btn" id="animeQuoteBtn" aria-label="Retrieve new quote">
+                                    <i class="fas fa-sync-alt"></i> RECODE AURA
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Panel: Gaming -->
+                        <div class="console-panel" data-panel="gaming">
+                            <div class="panel-header">
+                                <span class="panel-number">MOD-02 // REFLEX</span>
+                                <h3>Gaming Enthusiast</h3>
+                            </div>
+                            <p>Engage in real-time strategy, RPGs, and tactical competitive scenarios. Playing strategic games exercises high cognitive load, quick response times, and spatial planning.</p>
+                            
+                            <div class="panel-metrics">
+                                <div class="metric-row">
+                                    <span class="metric-label">APM Speed</span>
+                                    <div class="metric-bar-container"><div class="metric-bar-fill" style="width: 85%"></div></div>
+                                    <span class="metric-val">150+</span>
+                                </div>
+                                <div class="metric-row">
+                                    <span class="metric-label">Tactical Adaptability</span>
+                                    <div class="metric-bar-container"><div class="metric-bar-fill" style="width: 95%"></div></div>
+                                    <span class="metric-val">95%</span>
+                                </div>
+                            </div>
+
+                            <div class="panel-interactive-box">
+                                <div class="game-terminal-header">
+                                    <span class="decryption-title">REFLEX SIMULATOR: DECRYPT PROFILE</span>
+                                    <span class="decryption-pct" id="gameDecryptPct">DECRYPTING: 0%</span>
+                                </div>
+                                <div class="game-board-container">
+                                    <div class="game-grid-3x3" id="gameGrid">
+                                        <!-- Blinking nodes generated in JS -->
+                                    </div>
+                                    <div class="game-over-overlay" id="gameOverOverlay">
+                                        <div class="unlock-success-text">VAULT UNLOCKED</div>
+                                        <p>Snehal's Gaming Stats: Level 99 Strategist, 12,000+ nodes bypassed, master of coordination & tactics.</p>
+                                        <button class="console-action-btn" id="gameResetBtn" aria-label="Reset simulation">RE-ENCRYPT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel: Music -->
+                        <div class="console-panel" data-panel="music">
+                            <div class="panel-header">
+                                <span class="panel-number">MOD-03 // RESONANCE</span>
+                                <h3>Music Lover</h3>
+                            </div>
+                            <p>Sound is essential. Fueling my coding sessions with deep ambient soundscapes, synthwave, classical symphonies, and acoustic vibes, which boosts focus and spatial reasoning.</p>
+
+                            <div class="panel-metrics">
+                                <div class="metric-row">
+                                    <span class="metric-label">Acoustic Aura</span>
+                                    <div class="metric-bar-container"><div class="metric-bar-fill" style="width: 94%"></div></div>
+                                    <span class="metric-val">94%</span>
+                                </div>
+                                <div class="metric-row">
+                                    <span class="metric-label">Focus Attunement</span>
+                                    <div class="metric-bar-container"><div class="metric-bar-fill" style="width: 90%"></div></div>
+                                    <span class="metric-val">90%</span>
+                                </div>
+                            </div>
+
+                            <div class="panel-interactive-box">
+                                <div class="music-visualizer-wrap">
+                                    <canvas id="musicVisualizer" width="400" height="120"></canvas>
+                                    <div class="synth-pads-row">
+                                        <button class="synth-pad" data-pitch="261.63">C4</button>
+                                        <button class="synth-pad" data-pitch="293.66">D4</button>
+                                        <button class="synth-pad" data-pitch="329.63">E4</button>
+                                        <button class="synth-pad" data-pitch="349.23">F4</button>
+                                        <button class="synth-pad" data-pitch="392.00">G4</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel: Reading -->
+                        <div class="console-panel" data-panel="reading">
+                            <div class="panel-header">
+                                <span class="panel-number">MOD-04 // ABSORPTION</span>
+                                <h3>Avid Reader</h3>
+                            </div>
+                            <p>Exploring high-fantasy books, complex system design blogs, and biographies. Reading expands cognitive databases, enhances vocabulary, and fosters abstract engineering thoughts.</p>
+
+                            <div class="panel-metrics">
+                                <div class="metric-row">
+                                    <span class="metric-label">Cognitive Database Size</span>
+                                    <div class="metric-bar-container"><div class="metric-bar-fill" style="width: 96%"></div></div>
+                                    <span class="metric-val">96%</span>
+                                </div>
+                                <div class="metric-row">
+                                    <span class="metric-label">Focus Lifespan</span>
+                                    <div class="metric-bar-container"><div class="metric-bar-fill" style="width: 88%"></div></div>
+                                    <span class="metric-val">88%</span>
+                                </div>
+                            </div>
+
+                            <div class="panel-interactive-box">
+                                <div class="reading-terminal-row">
+                                    <div class="dossier-list">
+                                        <button class="dossier-btn active" data-file="fantasy">FANTASY_LORE.log</button>
+                                        <button class="dossier-btn" data-file="tech">TECH_DIGEST.txt</button>
+                                        <button class="dossier-btn" data-file="inspiration">MOTIVATION.diz</button>
+                                    </div>
+                                    <div class="dossier-reader">
+                                        <div class="dossier-display-box" id="dossierDisplay">
+                                            Loading book files...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Shader Diagnostics Sandbox -->
+            <div class="shader-sandbox">
+                <!-- Sandbox Cockpit Header -->
+                <div class="sandbox-hud-title">
+                    <span class="sandbox-title-led"></span>
+                    <h3>SYSTEM SHADER DIAGNOSTICS DECK</h3>
+                    <div class="sandbox-telemetry">// GPU_CORE_LINK: ACTIVE // FREQ: 2.84GHz</div>
+                </div>
+
+                <div class="sandbox-grid-layout">
+                    <!-- Column 1: GPU Compile Recipes (Formulas) -->
+                    <div class="sandbox-panel recipes-panel">
+                        <div class="panel-tag">[RECIPE_DB]</div>
+                        <h4>Compile Targets</h4>
+                        <div class="recipe-grid">
+                            <div class="recipe-card" data-recipe="thermal">
+                                <div class="recipe-name"><i class="fas fa-fire red-text"></i> Thermal Engine</div>
+                                <div class="recipe-flow">Thread &rarr; Buffer &rarr; Kernel</div>
+                                <div class="recipe-cost">Cost: 30% Power</div>
+                            </div>
+                            <div class="recipe-card" data-recipe="neural">
+                                <div class="recipe-name"><i class="fas fa-bolt cyan-text"></i> Neural Link</div>
+                                <div class="recipe-flow">Array &rarr; Query &rarr; Kernel</div>
+                                <div class="recipe-cost">Cost: 45% Power</div>
+                            </div>
+                            <div class="recipe-card" data-recipe="gravity">
+                                <div class="recipe-name"><i class="fas fa-circle-notch blue-text"></i> Gravity Attractor</div>
+                                <div class="recipe-flow">Buffer &rarr; Array &rarr; Thread</div>
+                                <div class="recipe-cost">Cost: 40% Power</div>
+                            </div>
+                            <div class="recipe-card" data-recipe="node">
+                                <div class="recipe-name"><i class="fas fa-clone purple-text"></i> Node Replication</div>
+                                <div class="recipe-flow">Kernel &rarr; Buffer &rarr; Array</div>
+                                <div class="recipe-cost">Cost: 35% Power</div>
+                            </div>
+                            <div class="recipe-card" data-recipe="matrix">
+                                <div class="recipe-name"><i class="fas fa-border-all orange-text"></i> Matrix Overhaul</div>
+                                <div class="recipe-flow">Thread &rarr; Shader &rarr; Kernel</div>
+                                <div class="recipe-cost">Cost: 50% Power</div>
+                            </div>
+                            <div class="recipe-card" data-recipe="system">
+                                <div class="recipe-name"><i class="fas fa-scroll gold-text"></i> System Diagnostics</div>
+                                <div class="recipe-flow">Array &rarr; Shader &rarr; Buffer</div>
+                                <div class="recipe-cost">Cost: 25% Power</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Module Assembler Keys -->
+                    <div class="sandbox-panel assembler-panel">
+                        <div class="panel-tag">[NODE_KEYS]</div>
+                        <h4>Diagnostic Modules</h4>
+                        <p class="assembler-instructions">Select compile keys in matching sequence sequence to execute simulations.</p>
+                        
+                        <div class="sandbox-module-row">
+                            <button class="sandbox-module-btn" data-module="thread" aria-label="Thread Module">
+                                <div class="module-indicator"></div>
+                                <span class="module-emoji">🧵</span>
+                                <span class="module-name">Thread</span>
+                            </button>
+                            <button class="sandbox-module-btn" data-module="buffer" aria-label="Buffer Module">
+                                <div class="module-indicator"></div>
+                                <span class="module-emoji">💾</span>
+                                <span class="module-name">Buffer</span>
+                            </button>
+                            <button class="sandbox-module-btn" data-module="kernel" aria-label="Kernel Module">
+                                <div class="module-indicator"></div>
+                                <span class="module-emoji">⚙️</span>
+                                <span class="module-name">Kernel</span>
+                            </button>
+                            <button class="sandbox-module-btn" data-module="array" aria-label="Array Module">
+                                <div class="module-indicator"></div>
+                                <span class="module-emoji">📊</span>
+                                <span class="module-name">Array</span>
+                            </button>
+                            <button class="sandbox-module-btn" data-module="query" aria-label="Query Module">
+                                <div class="module-indicator"></div>
+                                <span class="module-emoji">🔍</span>
+                                <span class="module-name">Query</span>
+                            </button>
+                            <button class="sandbox-module-btn" data-module="shader" aria-label="Shader Module">
+                                <div class="module-indicator"></div>
+                                <span class="module-emoji">🎨</span>
+                                <span class="module-name">Shader</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Diagnostic Monitor & Compiler Actions -->
+                    <div class="sandbox-panel monitor-panel">
+                        <div class="panel-tag">[MONITOR_CORE]</div>
+                        <h4>Pipeline Output</h4>
+                        
+                        <div class="pipeline-monitor-display">
+                            <div class="pipeline-row">
+                                <span class="pipeline-label">Pipeline Queue:</span>
+                                <div class="sequence-history" id="sequenceHistory"></div>
+                            </div>
+                            <div class="pipeline-console">
+                                <div class="console-scanline"></div>
+                                <div class="console-grid-overlay"></div>
+                                <div class="sandbox-output" id="sandboxOutput">READY TO COMPILE...</div>
+                            </div>
+                        </div>
+
+                        <div class="sandbox-control-actions">
+                            <button class="reset-sandbox-btn" id="resetSandbox"><i class="fas fa-trash-alt"></i> PURGE QUEUE</button>
+                            <div class="overclock-secure-wrapper">
+                                <span class="overclock-note">🔋 Overclock: Hold C/SPACE or button below</span>
+                                <button class="overclock-btn" id="overclockBtn"><i class="fas fa-charging-station"></i> OVERCLOCK CORE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="floating-elements">
+                <div class="floating-cube"></div>
+                <div class="floating-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-to-top" id="backToTop" role="button" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">Snehal Baranwal</span>
+                <p class="footer-tagline">Java Full Stack Developer</p>
+            </div>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certs</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://linkedin.com/in/snehal-baranwal" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/snehal-100" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:snehalbaranwal5@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Snehal Baranwal. Crafted with <span class="footer-heart">♥</span> and lots of code.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="premium-effects.js"></script>
+</body>
+</html>
