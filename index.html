@@ -306,7 +306,7 @@
                             <div class="board-stats">
                                 <div class="board-stat">
                                     <span class="stat-lbl">CGPA</span>
-                                    <span class="stat-num glow-amber">8.97<sup>/10</sup></span>
+                                    <span class="stat-num glow-amber">8.99<sup>/10</sup></span>
                                 </div>
                                 <div class="board-stat">
                                     <span class="stat-lbl">SEMESTER</span>
@@ -408,7 +408,7 @@
                 <div class="skills-hex-container">
                     <div class="honeycomb-grid" id="honeycombGrid">
                         <!-- Row 1 -->
-                        <div class="hex-cell reveal" data-skill="React" data-category="frontend" data-pct="90" data-level="EXPERT" data-color="#61DAFB" data-desc="Component-based architecture, context APIs, custom hooks, and state optimization. Used in TourWeave and Flare.">
+                        <div class="hex-cell reveal" data-skill="React" data-category="frontend" data-pct="90" data-level="EXPERT" data-color="#61DAFB" data-desc="Component-based architecture, context APIs, custom hooks, and state optimization. Used in FulfillQ, HireHub, and TaskFlow.">
                             <div class="hex-in"><div class="hex-content"><i class="fab fa-react"></i><span>React</span></div></div>
                         </div>
                         <div class="hex-cell reveal" data-skill="Java" data-category="backend" data-pct="92" data-level="EXPERT" data-color="#F89820" data-desc="Object-oriented core logic, multi-threading architectures, memory management, garbage collection, and Java backend development.">
@@ -417,7 +417,7 @@
                         <div class="hex-cell reveal" data-skill="JavaScript" data-category="frontend" data-pct="88" data-level="ADVANCED" data-color="#F7DF1E" data-desc="ES6+ features, asynchronous programming, DOM lifecycle manipulation, and modular vanilla implementations.">
                             <div class="hex-in"><div class="hex-content"><i class="fab fa-js-square"></i><span>JS</span></div></div>
                         </div>
-                        <div class="hex-cell reveal" data-skill="Spring Boot" data-category="backend" data-pct="85" data-level="ADVANCED" data-color="#6DB33F" data-desc="Robust REST microservices, Spring Security JWT filter auth, JPA repository database integrations. Used in TaskFlow.">
+                        <div class="hex-cell reveal" data-skill="Spring Boot" data-category="backend" data-pct="85" data-level="ADVANCED" data-color="#6DB33F" data-desc="Robust REST microservices, Spring Security JWT filter auth, JPA repository database integrations. Used in FulfillQ, HireHub, and TaskFlow.">
                             <div class="hex-in"><div class="hex-content"><i class="fas fa-leaf"></i><span>Spring</span></div></div>
                         </div>
                         <!-- Row 2 -->
@@ -434,8 +434,8 @@
                             <div class="hex-in"><div class="hex-content"><i class="fas fa-database"></i><span>MongoDB</span></div></div>
                         </div>
                         <!-- Row 3 -->
-                        <div class="hex-cell reveal" data-skill="Supabase" data-category="database" data-pct="80" data-level="ADVANCED" data-color="#3ECF8E" data-desc="BaaS integration, PostgreSQL hosting, Supabase Authentication workflows, and real-time database subscription services. Used in TourWeave.">
-                            <div class="hex-in"><div class="hex-content"><i class="fas fa-bolt"></i><span>Supabase</span></div></div>
+                        <div class="hex-cell reveal" data-skill="Kafka" data-category="backend" data-pct="84" data-level="ADVANCED" data-color="#E05B24" data-desc="Distributed event streaming, high-throughput message brokers, producer-consumer architectures, and pub/sub pipelines. Used in FulfillQ.">
+                            <div class="hex-in"><div class="hex-content"><i class="fas fa-stream"></i><span>Kafka</span></div></div>
                         </div>
                         <div class="hex-cell reveal" data-skill="Git" data-category="backend" data-pct="85" data-level="ADVANCED" data-color="#F05032" data-desc="Distributed version control, branching strategies, commit tracking, merge conflict resolution, and GitHub collaboration workflows.">
                             <div class="hex-in"><div class="hex-content"><i class="fab fa-git-alt"></i><span>Git</span></div></div>
@@ -486,26 +486,26 @@
             </div>
 
             <div class="blueprint-archive">
-                <!-- Project 1: TourWeave Collaborative Travel Planning Platform -->
+                <!-- Project 1: FulfillQ Distributed Order Fulfillment Platform -->
                 <div class="project project-dossier reveal" data-project-id="1">
                     <div class="dossier-schematic">
-                        <div class="schematic-title"><i class="fas fa-project-diagram"></i> COLLABORATIVE ARCHITECTURE SCHEMATIC</div>
+                        <div class="schematic-title"><i class="fas fa-project-diagram"></i> DISTRIBUTED FULFILLMENT &amp; EVENT PIPELINE</div>
                         <div class="schematic-board">
                             <div class="schematic-node node-fe" style="--col: 1; --row: 2;">
                                 <div class="node-icon"><i class="fab fa-react"></i></div>
                                 <span class="node-label">React Client</span>
                             </div>
                             <div class="schematic-node node-be" style="--col: 3; --row: 2;">
-                                <div class="node-icon"><i class="fas fa-bolt"></i></div>
-                                <span class="node-label">Supabase Backend</span>
+                                <div class="node-icon"><i class="fas fa-leaf"></i></div>
+                                <span class="node-label">Spring Boot</span>
                             </div>
                             <div class="schematic-node node-db" style="--col: 5; --row: 1;">
                                 <div class="node-icon"><i class="fas fa-database"></i></div>
-                                <span class="node-label">PostgreSQL DB</span>
+                                <span class="node-label">PostgreSQL Lock</span>
                             </div>
                             <div class="schematic-node node-gateway" style="--col: 5; --row: 3;">
-                                <div class="node-icon"><i class="fas fa-envelope"></i></div>
-                                <span class="node-label">EmailJS Gateway</span>
+                                <div class="node-icon"><i class="fas fa-stream"></i></div>
+                                <span class="node-label">Kafka &amp; Redis</span>
                             </div>
                             
                             <!-- Interconnection wires -->
@@ -516,7 +516,7 @@
                                 <!-- Be to Db -->
                                 <path d="M340 100 L420 50" class="wire-line" />
                                 <circle r="3" class="wire-pulse animate-pulse-bedb" />
-                                <!-- Be to Email -->
+                                <!-- Be to Kafka/Redis -->
                                 <path d="M340 100 L420 150" class="wire-line" />
                                 <circle r="3" class="wire-pulse animate-pulse-bestripe" />
                             </svg>
@@ -525,52 +525,52 @@
                     <div class="dossier-details">
                         <div class="dossier-header">
                             <span class="dossier-num">DOSSIER // 01</span>
-                            <h3>TourWeave</h3>
-                            <span class="dossier-date">Dec. 2025 – Mar. 2026</span>
+                            <h3>FulfillQ</h3>
+                            <span class="dossier-date">July 2026 – Aug. 2026</span>
                         </div>
-                        <p class="dossier-desc">A full-stack collaborative travel planning platform enabling users to create trips, manage itineraries, and invite members through secure email invitations. Designed reusable React components and implemented RESTful CRUD operations.</p>
+                        <p class="dossier-desc">A distributed order fulfillment platform that routes orders across multiple warehouses based on inventory availability and warehouse proximity. Implemented concurrency-safe inventory reservation, automatic order splitting, shipment tracking, and event-driven workflows.</p>
                         
                         <div class="dossier-meta-grid">
-                            <div class="meta-item"><i class="fas fa-users"></i> <strong>Collab:</strong> Secure Invites</div>
-                            <div class="meta-item"><i class="fas fa-shield-alt"></i> <strong>Auth:</strong> Supabase Auth</div>
+                            <div class="meta-item"><i class="fas fa-lock"></i> <strong>Concurrency:</strong> PostgreSQL Pessimistic Locking</div>
+                            <div class="meta-item"><i class="fas fa-bolt"></i> <strong>Events:</strong> Apache Kafka</div>
                         </div>
                         
                         <div class="dossier-tech-tags">
-                            <span class="tag-react"><i class="fab fa-react"></i> React.js</span>
-                            <span class="tag-js"><i class="fab fa-js-square"></i> JavaScript</span>
-                            <span class="tag-supabase"><i class="fas fa-bolt"></i> Supabase</span>
-                            <span class="tag-postgres"><i class="fas fa-database"></i> PostgreSQL</span>
-                            <span class="tag-email"><i class="fas fa-envelope"></i> EmailJS</span>
+                            <span><i class="fab fa-java"></i> Java</span>
+                            <span><i class="fas fa-leaf"></i> Spring Boot</span>
+                            <span><i class="fab fa-react"></i> React.js</span>
+                            <span><i class="fas fa-database"></i> PostgreSQL</span>
+                            <span><i class="fas fa-stream"></i> Kafka</span>
+                            <span><i class="fas fa-memory"></i> Redis</span>
                         </div>
 
                         <div class="project-console" id="console-1">
-                            <div class="console-line">> Initializing Supabase Auth client...</div>
-                            <div class="console-line">> EmailJS SMTP: Listening for member invites</div>
+                            <div class="console-line">&gt; Kafka Producer: Order routing event dispatched to topic</div>
+                            <div class="console-line">&gt; PostgreSQL: PESSIMISTIC_WRITE lock acquired on inventory</div>
                         </div>
 
                         <div class="dossier-actions">
-                            <a href="https://tourweave.vercel.app" class="btn-dossier-live" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/RichGuyPoorGuy/tourweave" class="btn-dossier-code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
+                            <a href="https://github.com/snehal-100/FulfillQ" class="btn-dossier-code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2: TaskFlow Task Management System -->
+                <!-- Project 2: HireHub Full-Stack Recruitment Platform -->
                 <div class="project project-dossier dossier-reverse reveal reveal-delay-1" data-project-id="2">
                     <div class="dossier-schematic">
-                        <div class="schematic-title"><i class="fas fa-project-diagram"></i> TASK WORKSPACE &amp; SECURITY SCHEMATIC</div>
+                        <div class="schematic-title"><i class="fas fa-project-diagram"></i> RECRUITMENT WORKFLOW &amp; RBAC SCHEMATIC</div>
                         <div class="schematic-board">
                             <div class="schematic-node node-fe" style="--col: 1; --row: 2;">
                                 <div class="node-icon"><i class="fab fa-react"></i></div>
-                                <span class="node-label">Task Dashboard</span>
+                                <span class="node-label">React Portal</span>
                             </div>
                             <div class="schematic-node node-be" style="--col: 3; --row: 2;">
                                 <div class="node-icon"><i class="fas fa-leaf"></i></div>
                                 <span class="node-label">Spring Boot</span>
                             </div>
                             <div class="schematic-node node-security" style="--col: 5; --row: 1;">
-                                <div class="node-icon"><i class="fas fa-key"></i></div>
-                                <span class="node-label">JWT Auth Guard</span>
+                                <div class="node-icon"><i class="fas fa-shield-alt"></i></div>
+                                <span class="node-label">JWT + Security</span>
                             </div>
                             <div class="schematic-node node-db" style="--col: 5; --row: 3;">
                                 <div class="node-icon"><i class="fas fa-database"></i></div>
@@ -594,56 +594,58 @@
                     <div class="dossier-details">
                         <div class="dossier-header">
                             <span class="dossier-num">DOSSIER // 02</span>
-                            <h3>TaskFlow</h3>
-                            <span class="dossier-date">June 2025 – Sept. 2025</span>
+                            <h3>HireHub</h3>
+                            <span class="dossier-date">May 2026 – July 2026</span>
                         </div>
-                        <p class="dossier-desc">A full-stack task management application supporting project creation, task assignment, status tracking, and deadline management. Built secure REST APIs with Spring Boot and integrated JWT-based authentication with Spring Security.</p>
+                        <p class="dossier-desc">A full-stack recruitment platform connecting candidates and recruiters through job discovery, applications, and candidate management workflows. Implemented secure authentication, role-based authorization, job posting, resume management, application tracking, search, and filtering.</p>
                         
                         <div class="dossier-meta-grid">
-                            <div class="meta-item"><i class="fas fa-shield-alt"></i> <strong>Auth:</strong> JWT Security</div>
-                            <div class="meta-item"><i class="fas fa-sync"></i> <strong>ORM:</strong> Hibernate Mapping</div>
+                            <div class="meta-item"><i class="fas fa-shield-alt"></i> <strong>Auth:</strong> JWT + Spring Security</div>
+                            <div class="meta-item"><i class="fas fa-users-cog"></i> <strong>Roles:</strong> Candidate • Recruiter • Admin</div>
                         </div>
                         
                         <div class="dossier-tech-tags">
-                            <span class="tag-java"><i class="fab fa-java"></i> Java</span>
-                            <span class="tag-spring"><i class="fas fa-leaf"></i> Spring Boot</span>
-                            <span class="tag-react"><i class="fab fa-react"></i> React.js</span>
-                            <span class="tag-postgres"><i class="fas fa-database"></i> PostgreSQL</span>
-                            <span class="tag-mysql"><i class="fas fa-database"></i> MySQL</span>
+                            <span><i class="fab fa-java"></i> Java</span>
+                            <span><i class="fas fa-leaf"></i> Spring Boot</span>
+                            <span><i class="fas fa-shield-alt"></i> Spring Security</span>
+                            <span><i class="fas fa-sync"></i> Hibernate</span>
+                            <span><i class="fab fa-react"></i> React.js</span>
+                            <span><i class="fas fa-database"></i> MySQL</span>
+                            <span><i class="fas fa-key"></i> JWT</span>
                         </div>
 
                         <div class="project-console" id="console-2">
-                            <div class="console-line">> Spring Security: Custom JWT Filter loaded</div>
-                            <div class="console-line">> Hibernate: Schema validation complete</div>
+                            <div class="console-line">&gt; Spring Security: RBAC filter verified (Candidate | Recruiter | Admin)</div>
+                            <div class="console-line">&gt; Hibernate: Job search query cached via MySQL engine</div>
                         </div>
 
                         <div class="dossier-actions">
-                            <a href="https://taskflow-frontend-09hq.onrender.com" class="btn-dossier-live" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/snehal-100/TaskFlow-FullStack" class="btn-dossier-code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
+                            <a href="https://hirehub-frontend-gules.vercel.app/" class="btn-dossier-live" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/snehal-100/Hirehub" class="btn-dossier-code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3: Flare Grocery Shopping Platform -->
+                <!-- Project 3: TaskFlow Task Management Platform -->
                 <div class="project project-dossier reveal reveal-delay-2" data-project-id="3">
                     <div class="dossier-schematic">
-                        <div class="schematic-title"><i class="fas fa-project-diagram"></i> E-COMMERCE ENGINE DIAGRAM</div>
+                        <div class="schematic-title"><i class="fas fa-project-diagram"></i> TASK WORKSPACE &amp; REST SCHEMATIC</div>
                         <div class="schematic-board">
                             <div class="schematic-node node-fe" style="--col: 1; --row: 2;">
                                 <div class="node-icon"><i class="fab fa-react"></i></div>
-                                <span class="node-label">React UI Client</span>
+                                <span class="node-label">Task Dashboard</span>
                             </div>
                             <div class="schematic-node node-be" style="--col: 3; --row: 2;">
-                                <div class="node-icon"><i class="fas fa-fire"></i></div>
-                                <span class="node-label">Firebase Auth</span>
+                                <div class="node-icon"><i class="fas fa-leaf"></i></div>
+                                <span class="node-label">Spring Boot</span>
                             </div>
-                            <div class="schematic-node node-graphics" style="--col: 5; --row: 1;">
-                                <div class="node-icon"><i class="fas fa-database"></i></div>
-                                <span class="node-label">Firestore DB</span>
+                            <div class="schematic-node node-security" style="--col: 5; --row: 1;">
+                                <div class="node-icon"><i class="fas fa-key"></i></div>
+                                <span class="node-label">JWT Auth Guard</span>
                             </div>
                             <div class="schematic-node node-db" style="--col: 5; --row: 3;">
-                                <div class="node-icon"><i class="fas fa-shopping-cart"></i></div>
-                                <span class="node-label">Cart Storage</span>
+                                <div class="node-icon"><i class="fas fa-database"></i></div>
+                                <span class="node-label">PostgreSQL DB</span>
                             </div>
                             
                             <!-- Interconnection wires -->
@@ -651,10 +653,10 @@
                                 <!-- Fe to Be -->
                                 <path d="M120 100 H260" class="wire-line" />
                                 <circle r="3" class="wire-pulse animate-pulse-febe" />
-                                <!-- Be to DB -->
+                                <!-- Be to JWT -->
                                 <path d="M340 100 L420 50" class="wire-line" />
                                 <circle r="3" class="wire-pulse animate-pulse-bedb" />
-                                <!-- Be to Storage -->
+                                <!-- Be to DB -->
                                 <path d="M340 100 L420 150" class="wire-line" />
                                 <circle r="3" class="wire-pulse animate-pulse-bestripe" />
                             </svg>
@@ -663,32 +665,34 @@
                     <div class="dossier-details">
                         <div class="dossier-header">
                             <span class="dossier-num">DOSSIER // 03</span>
-                            <h3>Flare</h3>
-                            <span class="dossier-date">Sept. 2024 – Dec. 2024</span>
+                            <h3>TaskFlow</h3>
+                            <span class="dossier-date">Apr. 2026 – May 2026</span>
                         </div>
-                        <p class="dossier-desc">A responsive grocery shopping platform featuring secure Firebase user authentication, Firestore database for persistent products, shopping cart logic, and category-based query filtering.</p>
+                        <p class="dossier-desc">A full-stack task management platform for organizing projects, assigning tasks, tracking status, and managing deadlines through a centralized workspace. Built secure authentication, RESTful APIs, and responsive dashboards for project and task visibility.</p>
                         
                         <div class="dossier-meta-grid">
-                            <div class="meta-item"><i class="fas fa-fire"></i> <strong>Data:</strong> Firebase &amp; Firestore</div>
-                            <div class="meta-item"><i class="fas fa-mobile-alt"></i> <strong>UX:</strong> Mobile-Responsive</div>
+                            <div class="meta-item"><i class="fas fa-shield-alt"></i> <strong>Auth:</strong> JWT + Spring Security</div>
+                            <div class="meta-item"><i class="fas fa-cogs"></i> <strong>Backend:</strong> RESTful APIs</div>
                         </div>
                         
                         <div class="dossier-tech-tags">
-                            <span class="tag-react"><i class="fab fa-react"></i> React.js</span>
-                            <span class="tag-js"><i class="fab fa-js-square"></i> JavaScript</span>
-                            <span class="tag-firebase"><i class="fas fa-fire"></i> Firebase</span>
-                            <span class="tag-html"><i class="fab fa-html5"></i> HTML5</span>
-                            <span class="tag-css"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span><i class="fab fa-java"></i> Java</span>
+                            <span><i class="fas fa-leaf"></i> Spring Boot</span>
+                            <span><i class="fas fa-shield-alt"></i> Spring Security</span>
+                            <span><i class="fas fa-sync"></i> Hibernate</span>
+                            <span><i class="fab fa-react"></i> React.js</span>
+                            <span><i class="fas fa-database"></i> PostgreSQL</span>
+                            <span><i class="fas fa-key"></i> JWT</span>
                         </div>
 
                         <div class="project-console" id="console-3">
-                            <div class="console-line">> FirebaseApp initialized successfully</div>
-                            <div class="console-line">> Firestore: Mapped collection 'products'</div>
+                            <div class="console-line">&gt; REST Controller: Mapping /api/v1/tasks endpoint</div>
+                            <div class="console-line">&gt; PostgreSQL: Transaction committed for workspace board</div>
                         </div>
 
                         <div class="dossier-actions">
-                            <a href="https://flare-tau.vercel.app" class="btn-dossier-live" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="https://github.com/snehal-100" class="btn-dossier-code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
+                            <a href="https://taskflow-frontend-09hq.onrender.com/" class="btn-dossier-live" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/snehal-100/TaskFlow-FullStack" class="btn-dossier-code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
                         </div>
                     </div>
                 </div>
@@ -771,7 +775,7 @@
                                     <strong>B.Tech in Computer Science and Engineering</strong>
                                     <span>Sept. 2023 - May 2027</span>
                                 </div>
-                                <p>Vellore Institute of Technology, Bhopal (CGPA: 8.97/10)</p>
+                                <p>Vellore Institute of Technology, Bhopal (CGPA: 8.99/10)</p>
                             </div>
                             <div class="preview-item">
                                 <div class="preview-item-title">
@@ -792,24 +796,24 @@
                             <h4>Highlighted Projects</h4>
                             <div class="preview-item" data-focus="developer">
                                 <div class="preview-item-title">
-                                    <strong>TourWeave</strong>
-                                    <span>2025 - 2026</span>
+                                    <strong>FulfillQ</strong>
+                                    <span>July 2026 – Aug. 2026</span>
                                 </div>
-                                <p>Collaborative travel planning platform integrating Supabase Authentication, PostgreSQL database operations, and EmailJS invitation workflows.</p>
+                                <p>Distributed order fulfillment platform featuring PostgreSQL pessimistic concurrency locking, multi-warehouse proximity routing, and Apache Kafka event-driven workflows.</p>
+                            </div>
+                            <div class="preview-item" data-focus="developer">
+                                <div class="preview-item-title">
+                                    <strong>HireHub</strong>
+                                    <span>May 2026 – July 2026</span>
+                                </div>
+                                <p>Full-stack recruitment platform with role-based access control (Candidate • Recruiter • Admin), Spring Security JWT authorization, and candidate pipeline tracking.</p>
                             </div>
                             <div class="preview-item" data-focus="developer">
                                 <div class="preview-item-title">
                                     <strong>TaskFlow</strong>
-                                    <span>2025</span>
+                                    <span>Apr. 2026 – May 2026</span>
                                 </div>
-                                <p>Task management application with Spring Boot REST APIs, Spring Security JWT access, and Hibernate relational mappings.</p>
-                            </div>
-                            <div class="preview-item" data-focus="developer">
-                                <div class="preview-item-title">
-                                    <strong>Flare</strong>
-                                    <span>2024</span>
-                                </div>
-                                <p>E-commerce grocery shopping platform featuring secure Firebase Authentication, Firestore databases, and cart caching.</p>
+                                <p>Full-stack task management workspace for organizing projects, assigning tasks, tracking status, and managing deadlines using Spring Boot REST APIs and React.</p>
                             </div>
                         </div>
                         <div class="resume-preview-section" data-section="experience" data-focus="leadership">
@@ -831,7 +835,7 @@
                         </div>
                         <div class="resume-preview-section" data-section="skills">
                             <h4>Core Skills</h4>
-                            <p class="preview-skills-list" data-focus="developer">Java, JavaScript, SQL, HTML5, CSS3, Spring Boot, Spring Security, Hibernate, React.js, Supabase, Firebase, MySQL, PostgreSQL, MongoDB, REST APIs, Git, DSA, OOPS</p>
+                            <p class="preview-skills-list" data-focus="developer">Java, Spring Boot, Spring Security, Hibernate, Apache Kafka, Redis, PostgreSQL, MySQL, MongoDB, React.js, JavaScript, REST APIs, JWT, Git, Docker, DSA</p>
                             <p class="preview-skills-list" data-focus="leadership">Team Leadership, Event Management, Cross-functional Collaboration, Task Delegation, Event Logistics</p>
                         </div>
                     </div>

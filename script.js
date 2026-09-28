@@ -1063,22 +1063,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const linesMap = {
             '1': [
-                "> Initializing Redis catalog keys...",
-                "> Database query: SELECT * FROM products WHERE featured=true",
-                "> Catalog cache: HIT (12ms)",
-                "> Stripe API status: SECURE"
+                "> Initializing Kafka consumer group 'fulfillment-service'...",
+                "> PostgreSQL: Acquiring PESSIMISTIC_WRITE lock on inventory...",
+                "> Multi-warehouse proximity routing algorithm executed (0.04ms)",
+                "> Concurrency check passed: Safe reservation dispatched to Kafka"
             ],
             '2': [
-                "> Establishing WebSocket server on port 8080...",
-                "> WS Connection pool initialized (size: 500)",
-                "> JWT Security check: Snehal Baranwal token AUTHORIZED",
-                "> Database sync: COMPLETE"
+                "> Spring Security: Validating JWT claims and RBAC filter...",
+                "> Roles authenticated: [CANDIDATE, RECRUITER, ADMIN]",
+                "> Hibernate: Executing indexed candidate filtering query",
+                "> Application tracking pipeline: Synchronized with recruiter portal"
             ],
             '3': [
-                "> Initializing GPU render pipeline...",
-                "> Compiling vector matrices...",
-                "> Custom cursor position logging history active",
-                "> Developer portfolio deployment: ONLINE"
+                "> REST Controller: /api/v1/tasks endpoint invoked",
+                "> Spring Security: JWT bearer token authorized",
+                "> PostgreSQL: Workspace transaction committed (Status: IN_PROGRESS)",
+                "> Real-time dashboard state updated (latency: 14ms)"
             ]
         };
 
